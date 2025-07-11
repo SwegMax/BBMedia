@@ -1,6 +1,6 @@
-import { makeRequest } from "../../axios";
 import Post from "../post/Post";
 import "./posts.scss";
+import { makeRequest } from "../../axios";
 import { useQuery } from "@tanstack/react-query";
 
 const Posts = () => {
