@@ -19,7 +19,19 @@ app.use(cors({
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }))
-app.use(cookieParser())
+app.use(cookieParser());
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/my-uploads')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
