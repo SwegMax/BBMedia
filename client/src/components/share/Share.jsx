@@ -21,7 +21,7 @@ const Share = () => {
     } catch (err) { 
       console.log(err);
     }
-   }
+   };
 
   const {currentUser} = useContext(AuthContext)
 
