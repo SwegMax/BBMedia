@@ -6,7 +6,7 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
 import Comments from "../comments/Comments";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import moment from "moment";
 import { makeRequest } from "../../axios";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";

@@ -2,10 +2,9 @@ import "./share.scss";
 import Image from "../../assets/img.png";
 import Map from "../../assets/map.png";
 import Friend from "../../assets/friend.png";
-import { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
 import { makeRequest } from "../../axios";
 
 const Share = () => {

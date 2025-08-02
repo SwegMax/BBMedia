@@ -1,10 +1,9 @@
-import { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./comments.scss";
 import { AuthContext } from "../../context/authContext";
 import { makeRequest } from "../../axios";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import moment from "moment";
-import { useState } from "react";
 
 const Comments = ({postId}) => {
   const [desc, setDesc] = useState("");

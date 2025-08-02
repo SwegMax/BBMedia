@@ -1,5 +1,6 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import { API_BASE_URL } from "../clientConfig";
 
 export const AuthContext = createContext();
 
@@ -9,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post("http://localhost:8800/api/auth/login", inputs, {
+    const res = await axios.post(`${API_BASE_URL}auth/login`, inputs, {
       withCredentials: true,
     });
 
@@ -21,7 +22,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [currentUser]);
 
   const logout = async () => {
-    await axios.post("http://localhost:8800/api/auth/logout", {}, {
+    await axios.post(`${API_BASE_URL}auth/logout`, {}, {
       withCredentials: true,
     });
 

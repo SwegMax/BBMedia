@@ -9,6 +9,7 @@ import relationshipRoutes from "./routes/relationships.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import multer from "multer";
+import { CLIENT_BASE_URL } from "./apiConfig.js";
 
 //middlewares
 app.use((req, res, next) => {
@@ -17,7 +18,7 @@ app.use((req, res, next) => {
 });
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:3000", //https://d2dwvsvpbil2pt.cloudfront.net
+    origin:  CLIENT_BASE_URL, 
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }))

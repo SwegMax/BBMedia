@@ -12,7 +12,7 @@ import Posts from "../../components/posts/Posts"
 import { makeRequest } from "../../axios";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import { useLocation } from "react-router-dom";
-import { useContext,useState } from "react";
+import React, { useContext,useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import Update from "../../components/update/Update";
 

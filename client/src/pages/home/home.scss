@@ -1,4 +1,5 @@
-@import "../../style.scss";
+@use "sass:map";
+@use "../../style.scss" as *;
 
 .home{
   @include themify($themes) {
