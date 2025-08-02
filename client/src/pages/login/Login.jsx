@@ -33,13 +33,14 @@ const Login = () => {
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>BBMedia</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Welcome to BBMedia, a React/Node/Express social media web app project by {" "}
+            <a href="https://github.com/SwegMax" target="_blank" rel="noopener noreferrer">
+              SwegMax
+            </a>.
           </p>
-          <span>Don't you have an account?</span>
+          <span>Don't have an account?</span>
           <Link to="/register">
             <button>Register</button>
           </Link>
