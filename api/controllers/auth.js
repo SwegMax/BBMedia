@@ -50,6 +50,6 @@ export const login = (req, res) => {
 export const logout = (req, res) => {
     res.clearCookie("accessToken", {
         secure: true,
-        sameSite:"none" //due to our port being different 8800 and 3000
+        sameSite:"none" //due to port being different 8800 and 3000
     }).status(200).json("User has been logged out.")
 }

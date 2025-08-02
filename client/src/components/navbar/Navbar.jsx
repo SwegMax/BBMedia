@@ -8,19 +8,21 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, logout } = useContext(AuthContext);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
 
   return (
     <div className="navbar">
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span>lamasocial</span>
+          <span>BBMedia</span>
         </Link>
         <HomeOutlinedIcon />
         {darkMode ? (
@@ -38,12 +40,17 @@ const Navbar = () => {
         <PersonOutlinedIcon />
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
-        <div className="user">
+        <div className="user" onClick={() => setDropdownOpen(!dropdownOpen)}>
           <img
             src={currentUser.profilePic}
             alt=""
           />
           <span>{currentUser.name}</span>
+          {dropdownOpen && (
+            <div className="dropdown">
+              <button onClick={logout}>Log out</button>
+            </div>
+          )}
         </div>
       </div>
     </div>

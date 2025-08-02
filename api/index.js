@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000", //https://d2dwvsvpbil2pt.cloudfront.net
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }))
@@ -46,6 +46,9 @@ app.use("/api/comments", commentRoutes)
 app.use("/api/likes", likeRoutes)
 app.use("/api/relationships", relationshipRoutes)
 
-app.listen(8800, () => {
-    console.log("API working!");
+const PORT = 8800; //process.env.PORT
+app.listen(PORT, () => {
+    console.log(`API working on port ${PORT}`);
 });
+
+

@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .vs/
+
+#AWS & Deployment
+.env
+.env.*   
+build/ 
+.aws/  
+*.pem 
