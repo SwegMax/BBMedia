@@ -47,9 +47,9 @@ app.use("/api/comments", commentRoutes)
 app.use("/api/likes", likeRoutes)
 app.use("/api/relationships", relationshipRoutes)
 
-const PORT = 8800; //process.env.PORT
-app.listen(PORT, () => {
-    console.log(`API working on port ${PORT}`);
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`API working on port ${PORT}`);
 });
 
 
