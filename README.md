@@ -2,7 +2,7 @@
 
 A full-stack **React + Node.js + Express + Vite** project, deployed using **AWS S3**, **Elastic Beanstalk**, and **CloudFront**.
 
-🌐 **Live Website:** [https://d2dwvsvpbil2pt.cloudfront.net](https://d2dwvsvpbil2pt.cloudfront.net)
+🌐 **Live Website:** [https://bbmediahub.com](https://bbmediahub.com)
 
 🧪 **Sample Account:**
 Username: test2
